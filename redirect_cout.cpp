@@ -14,6 +14,7 @@ int main(int argc, char* argv[]) {
   for(int i=0; i<10; ++i) {
     printf("%d", i);
   }
+  // 有缓存，flush以调用系统调用
   fflush(stdout);
   if(close(STDOUT_FILENO)==-1) {
     _exit(-1);
